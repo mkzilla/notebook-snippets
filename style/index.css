@@ -1,0 +1,71 @@
+.jp-SnippetsBrowser {
+  background-color: var(--jp-layout-color1);
+  height: 100%;
+}
+
+.jp-SnippetsBrowser .jp-MyBinderButton {
+  /*background-image: url(binder.svg);*/
+}
+
+.jp-SnippetsBrowser .jp-MyBinderButton-disabled {
+  opacity: 0.3;
+}
+
+#setting-editor .jp-PluginList-icon.jp-GitHub-icon {
+  background-size: 85%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.jp-SnippetsList {
+  margin-left: -30px;
+  margin-top: -10px;
+}
+
+.jp-SnippetsList header {
+  border-bottom: var(--jp-border-width) solid var(--jp-border-color2);
+  flex: 0 0 auto;
+  font-size: var(--jp-ui-font-size0);
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.jp-SnippetsList li {
+  padding: 4px 12px 4px 4px;
+  color: var(--jp-ui-font-color1);
+  font-size: var(--jp-ui-font-size1);
+  font-weight: 400;
+  display: flex;
+  width: 100%;
+}
+
+.jp-SnippetsList li:hover{
+  background: var(--jp-layout-color2);
+}
+
+.jp-SnippetsList a {
+  position: relative;
+  top: -2px;
+  flex: 1 1 auto;
+  margin-right: 4px;
+  padding-left: 4px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 2px;
+}
+
+.jp-SnippetsList i {
+  margin-right: 10px;
+}
+
+.jp-statusbar span {
+  color: var(--jp-ui-font-color1);
+  font-family: var(--jp-ui-font-family);
+  font-size: var(--jp-ui-font-size1);
+  line-height: 24px;
+}
