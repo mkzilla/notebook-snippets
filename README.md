@@ -1,6 +1,6 @@
-# jupyterlab-snippets
+# notebook-snippets
 
-![Github Actions Status](https://github.com/mkzilla/jupyterlab-snippets/workflows/Build/badge.svg)
+![Github Actions Status](https://github.com/mkzilla/notebook-snippets/workflows/Build/badge.svg)
 
 code snippets integration for JupyterLab
 
@@ -12,7 +12,7 @@ code snippets integration for JupyterLab
 ## Install
 
 ```bash
-jupyter labextension install jupyterlab-snippets
+jupyter labextension install notebook-snippets
 ```
 
 ## Contributing
@@ -25,7 +25,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Move to jupyterlab-snippets directory
+# Move to notebook-snippets directory
 # Install dependencies
 jlpm
 # Build Typescript source
@@ -50,6 +50,6 @@ jupyter lab --watch
 ### Uninstall
 
 ```bash
-jupyter labextension uninstall jupyterlab-snippets
+jupyter labextension uninstall notebook-snippets
 ```
 

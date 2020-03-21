@@ -4,7 +4,7 @@ import {
 
 import {SnippetsBrowser} from './snippets';
 
-const PLUGIN_ID = 'mkzilla:jupyterlab-snippets';
+const PLUGIN_ID = 'mkzilla:notebook-snippets';
 
 /**
  * Initialization data for the jupyterlab-snippets extension.
