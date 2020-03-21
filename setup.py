@@ -9,36 +9,36 @@ from setupbase import (
 data_files_spec = [(
     'etc/jupyter/jupyter_notebook_config.d',
     'jupyter-config/jupyter_notebook_config.d',
-    'jupyterlab_snippets.json'
+    'notebook_snippets.json'
 ),]
 
 cmdclass = create_cmdclass(data_files_spec=data_files_spec)
 
 setup_dict = dict(
-    name='jupyterlab_snippets',
-    version=get_version("jupyterlab_snippets/_version.py"),
-    description='A Jupyter Notebook server extension which acts as an endpoint for LaTeX.',
+    name='notebook_snippets',
+    version=get_version('notebook_snippets/_version.py'),
+    description='code snippets integration for JupyterLab',
     packages=find_packages(),
     cmdclass=cmdclass,
-    author          = 'Jupyter Development Team',
-    author_email    = 'jupyter@googlegroups.com',
-    url             = 'http://jupyter.org',
-    license         = 'MIT',
-    platforms       = "Linux, Mac OS X, Windows",
-    keywords        = ['Jupyter', 'JupyterLab', 'snippets'],
-    python_requires = '>=3.6',
-    classifiers     = [
+    author='chengtian',
+    author_email='792400644@qq.com',
+    url='https://github.com/mkzilla/jupyterlab-snippets',
+    license='MIT',
+    platforms='Linux, Mac OS X, Windows',
+    keywords=['Jupyter', 'JupyterLab', 'snippets'],
+    python_requires='>=3.6',
+    classifiers=[
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'Intended Audience :: Science/Research',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
     ],
     install_requires=[
         'notebook'
     ],
-    package_data={'jupyterlab_snippets':['api/*']},
+    package_data={'notebook_snippets':['api/*']},
 )
 
 try:
