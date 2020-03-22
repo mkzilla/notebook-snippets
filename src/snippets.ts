@@ -29,7 +29,7 @@ export class SnippetsBrowser extends Widget {
 export class SnippetsList extends Widget {
   private _ul: HTMLUListElement;
   private _header: HTMLHeadElement;
-  snippets: SnippetsCommand[] = [];
+  snippets: SnippetCommand[] = [];
   app: JupyterFrontEnd;
 
   constructor(app: JupyterFrontEnd) {
@@ -54,8 +54,10 @@ export class SnippetsList extends Widget {
       }
       response.json().then((data) => {
         this.snippets = [];
+        console.log(data);
         data.map((m: any) => {
-          let md = new SnippetsCommand(this.app,m);
+          console.log(m);
+          let md = new SnippetCommand(this.app,m);
           this.snippets.push(md);
           this._ul.appendChild(md.html());
         });
@@ -66,17 +68,17 @@ export class SnippetsList extends Widget {
   }
 }
 
-export class Snippets {
+export class Snippet {
   name: string;
-  snippets: string[];
+  snippet: string[];
 }
 
-export class SnippetsCommand extends Widget {
-  snippets: Snippets;
+export class SnippetCommand extends Widget {
+  snippet: Snippet;
   private _div: HTMLDivElement;
-  constructor(app: JupyterFrontEnd,snippets: Snippets) {
+  constructor(app: JupyterFrontEnd,snippet: Snippet) {
     super();
-    this.snippets = snippets;
+    this.snippet = snippet;
     this._div = document.createElement('div');
     let self = this;
     this._div.onclick = function () {
@@ -87,7 +89,7 @@ export class SnippetsCommand extends Widget {
             cell_type: "code",
             metadata: { trusted: false },
             source: [
-              self.snippets.snippets.join('\n')
+              self.snippet.snippet.join('\n')
             ]
           }
       });
@@ -98,7 +100,7 @@ export class SnippetsCommand extends Widget {
   }
 
   html() {
-    this._div.innerHTML = `<li><a>${this.snippets.name}</a><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></li>`;
+    this._div.innerHTML = `<li><a>${this.snippet.name}</a><i class="fa fa-arrow-circle-right" aria-hidden="true"></i></li>`;
     return this._div;
   }
 }

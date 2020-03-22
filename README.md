@@ -12,7 +12,7 @@ code snippets integration for JupyterLab
 ## Install
 
 ```bash
-jupyter labextension install notebook-snippets
+jupyter labextension install notebook_snippets
 ```
 
 ## Contributing

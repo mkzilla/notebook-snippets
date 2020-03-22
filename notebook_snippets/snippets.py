@@ -1,21 +1,14 @@
 from notebook.base.handlers import IPythonHandler
+from .code import numba, python, python_regex
 import json
 
-code = [
-    {
-        'name':'Setup',
-        'snippets': [
-            'from __future__ import print_function, division',
-            'import sys',
-            'if sys.version_info[0] >= 3:',
-            '    xrange = range  # Must always iterate with xrange in njit functions',
-            'import numba',
-        ]
-    }
 
-]
+arr = []
+
+arr = arr + python.code + python_regex.code + numba.code
 
 
 class snippets(IPythonHandler):
     def get(self):
-        self.finish(json.dumps(code))
+
+        self.finish(json.dumps(arr))
